@@ -79,13 +79,13 @@ def get_seed_value_pairs(rand_gen_func, num_results):
 def get_function(act_name, func_name):
     # text = "from hidden_tests_" + act_name + " import sol_" + func_name
     import importlib
-    module = importlib.import_module("em2024p2act5.hidden_tests_"+act_name)
+    module = importlib.import_module("em2024p2act6.hidden_tests_"+act_name)
     return getattr(module, "sol_"+func_name)
 
 def get_input(act_name, func_name):
     # text = "from hidden_tests_" + act_name + " import input_" + func_name
     import importlib
-    module = importlib.import_module("em2024p2act5.hidden_tests_"+act_name)
+    module = importlib.import_module("em2024p2act6.hidden_tests_"+act_name)
     return getattr(module, "input_"+func_name)()
 
 def error_message_simple(expected_output, real_output, func_name, arg_name=False, **args):
